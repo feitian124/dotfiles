@@ -31,13 +31,14 @@ set nowritebackup
 
 "语法高亮
 syntax on
+colorscheme desert
 
 "打开命令行补全菜单
 set wildmenu
 "关闭响铃，闪屏
 set vb t_vb=
 "显示行号
-set nu
+set number
 "马上跳到搜索匹配
 set incsearch
 
@@ -53,6 +54,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set smarttab
+
+set cursorcolumn
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
