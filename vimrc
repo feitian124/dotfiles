@@ -1,18 +1,15 @@
 " git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " BundleInstall
 
-set nocompatible               " be iMproved
-filetype off                   " required!
+set nocompatible                " be iMproved
+filetype off                    " required!
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
-" let Vundle manage Vundle
-" required!
+" let Vundle manage Vundle, required!
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
-
 Bundle 'Align'
 Bundle 'tpope/vim-rails'
 Bundle 'msanders/snipmate.vim'
@@ -23,51 +20,36 @@ Bundle 'slim-template/vim-slim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 
-" 字体
-set guifont=monaco\ 10
-
+set guifont=monaco\ 10          " 字体
 set nobackup
 set nowritebackup
 
-"语法高亮
-syntax on
+syntax on                       "语法高亮
 colorscheme desert
-
-"打开命令行补全菜单
-set wildmenu
-"关闭响铃，闪屏
-set vb t_vb=
-"显示行号
-set number
-"马上跳到搜索匹配
-set incsearch
-
-"根据文件格式载入插件和缩进
-filetype plugin indent on
+set wildmenu                    "打开命令行补全菜单
+set vb t_vb=                    "关闭响铃，闪屏
+set number                      "显示行号
+set incsearch                   "马上跳到搜索匹配
+filetype plugin indent on       "根据文件格式载入插件和缩进
 set autoindent
-
-"打开鼠标功能
-set mouse=a
-
-"指标符宽度
+set encoding=utf-8
+set mouse=a                     "打开鼠标功能
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set smarttab
-
 set cursorcolumn
-
 " Display extra whitespace
-set list listchars=tab:»·,trail:·
+" set list listchars=tab:»·,trail:·
+set list listchars=tab:▸\ ,trail:▫
 
-autocmd FileType make     set noexpandtab
-autocmd FileType python   set noexpandtab
-autocmd FileType css,scss set tabstop=2 shiftwidth=2
-autocmd FileType eruby  set tabstop=2 shiftwidth=2
-autocmd FileType ruby,rdoc set tabstop=2 shiftwidth=2
-autocmd FileType html set tabstop=2 shiftwidth=2
-autocmd FileType javascript set tabstop=2 shiftwidth=2
-autocmd FileType coffee set tabstop=2 shiftwidth=2
+autocmd FileType make             set noexpandtab
+autocmd FileType python           set noexpandtab
+autocmd FileType css,scss         set tabstop=2 shiftwidth=2
+autocmd FileType ruby,rdoc        set tabstop=2 shiftwidth=2
+autocmd FileType html             set tabstop=2 shiftwidth=2
+autocmd FileType javascript       set tabstop=2 shiftwidth=2
+autocmd FileType coffee           set tabstop=2 shiftwidth=2
 autocmd BufRead,BufNewFile *.json set filetype=json
 autocmd BufRead,BufNewFile *.slim set filetype=slim
 
