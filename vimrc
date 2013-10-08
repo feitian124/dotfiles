@@ -21,6 +21,10 @@ filetype plugin indent on       "根据文件格式载入插件和缩进
 set guifont=monaco\ 10          " 字体
 set nobackup
 set nowritebackup
+set noswapfile                  " No Swap Files
+set ruler                       " Show line and column number
+set showcmd
+set showmatch                   " show matching brackets
 set wildmenu                    "打开命令行补全菜单
 set number                      "显示行号
 set incsearch                   "马上跳到搜索匹配
