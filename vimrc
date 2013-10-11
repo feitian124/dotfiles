@@ -50,7 +50,7 @@ fun! StripTrailingWhitespace()
 endfun
 
 autocmd BufWritePre * call StripTrailingWhitespace()
-autocmd VimEnter *  NERDTree
+autocmd VimEnter * if !argc() | NERDTree | endif
 
 nmap <Up> <c-w>k
 nmap <Down> <c-w>j
