@@ -1,6 +1,6 @@
 dotfiles
 ========
 
-the dot files
+the dot files, run below command to install:
 
-sh -c "`curl -fsSL https://raw.github.com/feitian124/dotfiles/master/install.sh`"
+curl -L https://raw.github.com/feitian124/dotfiles/master/install.sh | bash -s
