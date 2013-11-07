@@ -14,7 +14,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'hallison/vim-markdown'
 Bundle 'slim-template/vim-slim'
 Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic'
 Bundle 'altercation/vim-colors-solarized'
 filetype plugin indent on       "根据文件格式载入插件和缩进
 
