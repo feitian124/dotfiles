@@ -11,18 +11,23 @@ fi
 
 echo ""
 echo "------------- bash dotfile -------------------"
-mv -v "$HOME/.bashrc"       "/tmp/bashrc"
+mv -v  "$HOME/.bashrc"       "/tmp/bashrc"
 ln -sv "$folder/bashrc"      "$HOME/.bashrc"
 
 echo ""
 echo "------------- vim dotfile -------------------"
-mv -v "$HOME/.vimrc"              "/tmp/vimrc"
-mv -v "$HOME/.vim/bundle/vundle"  "/tmp/vundle"
-ln -sv "$folder/vimrc"      "$HOME/.vimrc"
+mv  -v  "$HOME/.vimrc"                         "/tmp/vimrc"
+mv  -v  "$HOME/.vim/bundle/vundle"             "/tmp/vundle"
+ln  -sv "$folder/vimrc"                        "$HOME/.vimrc"
 git clone https://github.com/gmarik/vundle.git "$HOME/.vim/bundle/vundle"
 vim +BundleInstall +qall
 
 echo ""
 echo "------------- tmux dotfile -------------------"
-mv -v "$HOME/.tmux.conf"    "/tmp/tmux.conf"
+mv -v  "$HOME/.tmux.conf"    "/tmp/tmux.conf"
 ln -sv "$folder/tmux.conf"   "$HOME/.tmux.conf"
+
+echo ""
+echo "------------- git dotfile -------------------"
+mv -v  "$HOME/.gitconfig"    "/tmp/gitconfig"
+ln -sv "$folder/gitconfig"   "$HOME/.gitconfig"
