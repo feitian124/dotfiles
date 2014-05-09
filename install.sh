@@ -1,6 +1,6 @@
 #!/bin/sh
 
-folder="$HOME/dotfiles"
+folder="$HOME/.dotfiles"
 
 if [ ! -d "$folder" ]; then
     echo "Installing dotfiles in $folder"

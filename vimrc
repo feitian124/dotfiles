@@ -64,9 +64,11 @@ nmap <Down> <c-w>j
 nmap <Right> <c-w>l
 nmap <Left> <c-w>h
 
+let mapleader=","
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " syntastic
 let g:syntastic_check_on_open = 1
@@ -76,3 +78,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 5
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_mode_map = { 'passive_filetypes': ['scss', 'slim'] }
+
+let g:session_autosave = 'yes'
+let g:session_autoload = 'yes'
+
