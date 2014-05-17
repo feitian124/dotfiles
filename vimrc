@@ -21,7 +21,15 @@ Bundle 'xolox/vim-session'
 Bundle 'altercation/vim-colors-solarized'
 filetype plugin indent on       "根据文件格式载入插件和缩进
 
-set guifont=monospace\ 10
+if has("gui_running")
+  colorscheme desert
+  set bs=2
+  set ruler
+  set gfn=Monaco:h16
+  set shell=/bin/bash
+  set guifont=monospace\ 10
+endif
+
 set nobackup
 set nowritebackup
 set noswapfile                  " No Swap Files
@@ -68,7 +76,7 @@ let mapleader=","
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor\|bower_components'
 
 " syntastic
 let g:syntastic_check_on_open = 1

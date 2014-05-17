@@ -108,6 +108,7 @@ fi
 
 # added by ming
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/app/phantomjs/bin:$PATH"
 export EDITOR='vim'
 eval "$(rbenv init -)"
 set -o vi
