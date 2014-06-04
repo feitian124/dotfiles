@@ -108,7 +108,11 @@ fi
 
 # added by ming
 export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/app/phantomjs/bin:$PATH"
+export PATH="$HOME/app/phantomjs-1-9-7/bin:$PATH"
 export EDITOR='vim'
 eval "$(rbenv init -)"
 set -o vi
+
+# Set config variables first
+GIT_PROMPT_ONLY_IN_REPO=1
+source ~/.bash-git-prompt/gitprompt.sh

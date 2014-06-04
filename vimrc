@@ -17,6 +17,7 @@ Bundle 'kien/ctrlp.vim'
 " the vim-session depends on vim-misc
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
+Bundle 'mustache/vim-mustache-handlebars'
 "Bundle 'scrooloose/syntastic'
 Bundle 'altercation/vim-colors-solarized'
 filetype plugin indent on       "根据文件格式载入插件和缩进
@@ -71,6 +72,7 @@ nmap <Up> <c-w>k
 nmap <Down> <c-w>j
 nmap <Right> <c-w>l
 nmap <Left> <c-w>h
+map <F5> :NERDTreeToggle<CR>
 
 let mapleader=","
 let g:rubycomplete_buffer_loading = 1
