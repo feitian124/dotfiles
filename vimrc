@@ -46,6 +46,8 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 autocmd BufWritePost $MYVIMRC NeoBundleClean
 " Fast edit the .vimrc file using ,x
 nnoremap <Leader>x :edit $MYVIMRC<CR>
+nnoremap <C-J> :bp<CR>
+nnoremap <C-K> :bn<CR>
 nnoremap <C-D> :bd<CR>
 nnoremap <C-E> :NERDTreeToggle<CR>
 
@@ -65,7 +67,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'kien/ctrlp.vim' " find files
 NeoBundle 'scrooloose/nerdtree' " NERD tree
-
+NeoBundle 'mustache/vim-mustache-handlebars'
 call neobundle#end()
 
 " Required:
@@ -75,15 +77,14 @@ filetype plugin indent on " Required!
  " this will conveniently prompt you to install them.
  NeoBundleCheck
 
-"============ CtrlP
+" CtrlP ===========================================
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip
+set wildignore+=*/tmp/*,*/node_modules/*,*/bower_components/*,*.so,*.swp,*.zip
+" <C-L> open in buffer mode, then <C-K> and <C-J> to cycle
+nnoremap <C-L> :CtrlPBuffer<CR>
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
-
-" <C-L> open in buffer mode, then <C-K> and <C-J> to cycle
-nnoremap <C-L> :CtrlPBuffer<CR>
