@@ -16,9 +16,13 @@ set softtabstop=2 " Indentation levels every 2 columns
 set shiftwidth=2 " Indent/outdent by 2 columns
 set shiftround " Indent/outdent to nearest tabstop
 
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swap//
-set undodir=~/.vim/undo//
+set nobackup       "no backup files
+set nowritebackup  "only in case you don't want a backup file while editing
+set noswapfile     "no swap files
+
+"set backupdir=~/.vim/backup//
+"set directory=~/.vim/swap//
+"set undodir=~/.vim/undo//
 
 if has('gui_running')
     set guioptions-=m
@@ -29,7 +33,6 @@ if has('gui_running')
 endif
 
 syntax on " Enable syntax
-set background=dark " Set background
 colorscheme desert
 
 let mapleader=',' " Change the mapleader
