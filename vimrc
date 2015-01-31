@@ -1,7 +1,6 @@
 set mouse=a "let mouse work
 set autoread " Set autoread when a file is changed outside
 set number " Show line numbers
-set textwidth=80 " Change text width
 
 set showmatch " Show matching brackets/parenthesis
 set matchtime=2 " Decrease the time to blink
@@ -16,6 +15,10 @@ set tabstop=2 "  Force tabs to be displayed to 2 spaces
 set softtabstop=2 " Indentation levels every 2 columns
 set shiftwidth=2 " Indent/outdent by 2 columns
 set shiftround " Indent/outdent to nearest tabstop
+
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
 
 if has('gui_running')
     set guioptions-=m
@@ -40,9 +43,6 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 autocmd BufWritePost $MYVIMRC NeoBundleClean
 " Fast edit the .vimrc file using ,x
 nnoremap <Leader>x :edit $MYVIMRC<CR>
-nnoremap <C-J> :bprevious<CR>
-nnoremap <C-K> :bnext<CR>
-" close buffer so above cmd has less buffer to loop over
 nnoremap <C-D> :bd<CR>
 nnoremap <C-E> :NERDTreeToggle<CR>
 
@@ -81,3 +81,6 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+
+" <C-L> open in buffer mode, then <C-K> and <C-J> to cycle
+nnoremap <C-L> :CtrlPBuffer<CR>
