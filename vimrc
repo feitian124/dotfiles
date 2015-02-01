@@ -1,3 +1,4 @@
+set encoding=utf-8
 set mouse=a "let mouse work
 set autoread " Set autoread when a file is changed outside
 set number " Show line numbers
