@@ -21,20 +21,29 @@ set nobackup       "no backup files
 set nowritebackup  "only in case you don't want a backup file while editing
 set noswapfile     "no swap files
 
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
+set nowrap                      " Do not wrap long lines
+set autoindent                  " Indent at the same level of the previous line
+set backspace=indent,eol,start  " Backspace for dummies
+"set cursorline                  " Highlight current line
+"set cursorcolumn                " Highlight current column
+set showcmd                     " Show partial commands in status line and
+set hlsearch                    " Highlight search terms
+
 "set backupdir=~/.vim/backup//
 "set directory=~/.vim/swap//
 "set undodir=~/.vim/undo//
 
 if has('gui_running')
-    set guioptions-=m
-    set guioptions-=T
-    set lines=999
-    set columns=999
-    set guifont=Ubuntu\ Mono\ 11
+  set guioptions-=m
+  set guioptions-=T
+  set lines=999
+  set columns=999
+  set guifont=Ubuntu\ Mono\ 11
 endif
 
 syntax on " Enable syntax
-colorscheme desert
 
 let mapleader=',' " Change the mapleader
 " Keep the cursor in place while joining lines
@@ -57,8 +66,8 @@ nnoremap <C-E> :NERDTreeToggle<CR>
 "--------------------------------------------------
 
 if has('vim_starting')
-    set nocompatible
-    set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
+  set nocompatible
+  set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
 endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
@@ -74,9 +83,9 @@ call neobundle#end()
 " Required:
 filetype plugin indent on " Required!
 
- " If there are uninstalled bundles found on startup,
- " this will conveniently prompt you to install them.
- NeoBundleCheck
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
 
 " CtrlP ===========================================
 let g:ctrlp_map = '<c-p>'
@@ -85,7 +94,7 @@ set wildignore+=*/tmp/*,*/node_modules/*,*/bower_components/*,*.so,*.swp,*.zip
 " <C-L> open in buffer mode, then <C-K> and <C-J> to cycle
 nnoremap <C-L> :CtrlPBuffer<CR>
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
+      \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+      \ 'file': '\v\.(exe|so|dll)$',
+      \ 'link': 'some_bad_symbolic_links',
+      \ }
