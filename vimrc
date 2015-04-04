@@ -78,6 +78,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'kien/ctrlp.vim' " find files
 NeoBundle 'scrooloose/nerdtree' " NERD tree
 NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'Raimondi/delimitMate'
 call neobundle#end()
 
 " Required:
