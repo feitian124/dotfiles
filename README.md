@@ -1,6 +1,16 @@
 # dotfiles
 
-dotfiles, works as a oh-my-zsh plugin.
+dotfiles, my personal oh-my-zsh plugin.
+
+## Functions
+
+- cd_clone - aliase `cdc`,  download `github.com/user_name/repo_name` to folder `~/github/user_name/repo_name`
+- cd_fzf - aliase `cdf`, cd to `fzf` selected directory. need install `fzf` and `fd` first
+- install_plugins - install useful plugins, then you can enable them in `.zshrc`
+
+## aliases
+
+see aliases.zsh.
 
 ## Install
 
@@ -18,6 +28,12 @@ Using [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh):
 
         source ~/.zshrc
 
-## Usage
+4.  Install plugins.(depends on this dotfiles plugin so need config it first)
 
-see comments in each file.
+        ```sh
+                install_plugins
+        ```
+
+        Activate plugins 
+        
+        plugins=( [plugins...] dotfiles zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
